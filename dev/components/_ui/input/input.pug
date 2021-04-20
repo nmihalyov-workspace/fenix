@@ -1,0 +1,7 @@
+mixin input(type, name, placeholder, className, required, hint, inputmode, value)
+  .input
+    input.input__field(value=value, class=`${className || ''} ${hint && 'input__field--hint'}`, type=type, name=name, required=required, placeholder=placeholder, inputmode=`${inputmode || 'text'}`)
+    if hint
+      .input__hint
+        .input__hint-info i
+        p.input__hint-box= hint

@@ -1,0 +1,13 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin demands
+  section.demands.container
+    .wrapper
+      +heading('Вы — учитель частной школы, и&nbsp;вы:', 'demands__heading')
+      .demands__grid
+        p.demands__paragraph Нацелены на <span>осмысленный&nbsp;результат</span> и&nbsp;ничего не делаете «для галочки»
+        p.demands__paragraph <span>Свободны&nbsp;от&nbsp;бюрократии</span> и ограничений в&nbsp;профессиональной деятельности
+        p.demands__paragraph <span>В&nbsp;ответе&nbsp;за&nbsp;будущее</span> каждого из своих учеников и даже их родителей
+      p.demands__desc Узнали себя? Тогда спешите подать заявку на участие в конкурсе!
+      +button('popup', 'Участвую', 'demands__btn', {popup: 'application'})

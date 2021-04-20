@@ -1,0 +1,19 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin win
+  section.win.container
+    .wrapper
+      +heading('Победители получат:', 'win__heading')
+      .win__grid
+        .win__item(data-place="1")
+          .win__item-icon
+          p.win__item-value 600 000 &#8381;
+        .win__item(data-place="2")
+          .win__item-icon
+          p.win__item-value 300 000 &#8381;
+        .win__item(data-place="3")
+          .win__item-icon
+          p.win__item-value 100 000 &#8381;
+      p.win__desc Номинантами на главный приз станут учителя, которые наберут максимальное количество баллов.
+      +button('popup', 'Хочу участвовать', 'win__btn', {popup: 'application'})

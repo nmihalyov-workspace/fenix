@@ -1,0 +1,7 @@
+mixin textarea(name, placeholder, className, required, hint, textareamode)
+  .textarea
+    textarea.textarea__field(wrap="off", rows="1", class=`${className || ''} ${hint && 'textarea__field--hint'}`, name=name, required=required, placeholder=placeholder, textareamode=`${textareamode || 'text'}`)
+    if hint
+      .textarea__hint
+        .textarea__hint-info i
+        p.textarea__hint-box= hint

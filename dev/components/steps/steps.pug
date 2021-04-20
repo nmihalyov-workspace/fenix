@@ -1,0 +1,27 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin steps
+  section.steps.container
+    .wrapper
+      +heading('Как победить', 'steps__heading')
+      .steps__grid
+        .steps__item
+          .steps__item-icon(data-icon="cam")
+          .steps__item-content
+            p.steps__item-heading Шаг 1
+            p.steps__item-desc Подготовьте презентационный видеоролик о школе, в которой вы работаете;
+        .steps__item
+          .steps__item-icon(data-icon="script")
+          .steps__item-content
+            p.steps__item-heading Шаг 2
+            p.steps__item-desc Напишите уникальный сценарий образовательного события для учеников;
+        .steps__item
+          .steps__item-icon(data-icon="bell")
+          .steps__item-content
+            p.steps__item-heading Шаг 3
+            p.steps__item-desc Реализуйте образовательное событие по сценарию учителя другой школы.
+      p.steps__desc Жюри возьмёт интервью у участников вашего образовательного события, спросит об их впечатлениях, оценит результаты и выберет победителя.
+      .steps__actions
+        +button('popup', 'Подать заявку', '', {popup: 'application'})
+        a.steps__link(href="#") Кликните здесь, чтобы узнать критерии оценки

@@ -1,0 +1,163 @@
+.steps
+  position: relative
+  padding: 110px 0 140px
+  background-color: $black
+  &:before,
+  &:after
+    z-index: 1
+    content: ''
+    position: absolute
+    display: block
+    background:
+      size: contain
+      position: center
+      repeat: no-repeat
+  &:before
+    top: -900px
+    left: 0
+    width: 402px
+    height: 1261px
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22402%22%20height%3D%221261%22%20viewBox%3D%220%200%20402%201261%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M-540.942%20-21.3503C-341.147%2048.7255%2021.2136%20239.305%20-127.71%20441.017C-276.634%20642.729%20-406.153%20611.462%20-452.297%20570.614C-486.05%20539.185%20-529.821%20454.271%20-434.879%20366.055C-316.201%20255.784%20-11.8228%20445.272%20-20.0225%20668.568C-28.2221%20891.863%20-261.023%20949.827%20-300.838%20839.397C-332.69%20751.053%20-250.774%20696.417%20-205.834%20680.142C-159.78%20659.19%20-37.1757%20650.107%2084.8026%20781.385C206.781%20912.663%2019.1785%201155.41%20-89.8699%201260.37%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+  &:after
+    bottom: -410px
+    right: 0
+    width: 233px
+    height: 645px
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22233%22%20height%3D%22645%22%20viewBox%3D%220%200%20233%20645%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M339.049%201.6776C435.152%203.96623%20540.368%2011.4435%20599.453%2087.2723C658.01%20162.425%20634.638%20264.75%20616.979%20358.373C597.999%20459.004%20588.887%20577.819%20498.023%20625.049C405.527%20673.127%20297.446%20621.375%20205.501%20572.252C119.709%20526.417%2044.3428%20461.821%2017.5049%20368.327C-11.2608%20268.118%20-6.12624%20152.872%2062.6149%2074.4878C128.715%20-0.885132%20238.826%20-0.709154%20339.049%201.6776Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+  &__heading
+    margin-bottom: 100px
+    color: #fff
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 1020px
+    margin: 0 auto 95px
+    color: #fff
+    text-align: center
+  &__item
+    position: relative
+    width: 275px
+    &:not(:last-child)
+      &:before
+        content: ''
+        position: absolute
+        top: 47px
+        left: 185px
+        width: 275px
+        height: 3px
+        background-color: $sand
+    &-icon
+      width: 100px
+      height: 100px
+      margin: 0 auto 45px
+      border-radius: 50%
+      background-color: $sand
+      background:
+        position: center
+        repeat: no-repeat
+      &[data-icon="cam"]
+        background-image: url('../img/icons/cam.svg')
+      &[data-icon="script"]
+        background-image: url('../img/icons/script.svg')
+      &[data-icon="bell"]
+        background-image: url('../img/icons/bell.svg')
+    &-heading
+      margin-bottom: 10px
+      font:
+        size: 25px
+        weight: 700
+    &-desc
+      line-height: 1.5
+  &__desc
+    width: 1020px
+    margin: 0 auto 95px
+    text-align: center
+    color: #fff
+    line-height: 1.5
+    font-size: 25px
+  &__actions
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: 670px
+    margin: 0 auto
+  &__link
+    display: block
+    width: 300px
+    margin-left: 40px
+    color: $golden
+    line-height: 1.5
+
+@media only screen and (max-width: $mobile)
+  .steps
+    padding: 45px 0 150px
+    &:before
+      top: -1220px
+      left: -110px
+    &:after
+      display: none
+    &__heading
+      margin-bottom: 40px
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin-bottom: 100px
+    &__item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      width: 100%
+      text-align: left
+      &:not(:last-child)
+        margin-bottom: 40px
+        &:before
+          top: 50px
+          left: 24px
+          width: 1px
+          height: 100%
+      &-icon
+        flex-shrink: 0
+        width: 50px
+        height: 50px
+        margin: 0 25px 0 0
+        background-size: 40%
+      &-content
+        padding-top: 10px
+      &-heading
+        margin-bottom: 10px
+        font-size: 15px
+    &__desc
+      width: 100%
+      margin-bottom: 35px
+      font-size: 15px
+    &__actions
+      position: relative
+      width: 100%
+      flex-flow: column nowrap
+      &:before
+        z-index: 2
+        position: absolute
+        content: ''
+        top: -320px
+        left: calc(50% - 318px)
+        display: block
+        width: 625px
+        height: 626px
+        background:
+          image: url('data:image/svg+xml,%3Csvg%20width%3D%22625%22%20height%3D%22626%22%20viewBox%3D%220%200%20625%20626%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M439.988%20495.631C386.836%20535.882%20326.497%20577.253%20261.695%20561.614C197.47%20546.114%20165.987%20480.494%20135.16%20422.065C102.024%20359.261%2055.6829%20290.85%2084.6167%20225.989C114.07%20159.963%20195.075%20141.382%20266.186%20128.341C332.539%20116.172%20401.33%20118.686%20456.255%20157.834C515.124%20199.794%20562.084%20264.551%20558.606%20336.767C555.262%20406.208%20495.418%20453.654%20439.988%20495.631Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+          size: contain
+          position: center
+          repeat: no-repeat
+      .button
+        z-index: 2
+        position: relative
+    &__link
+      z-index: 2
+      position: relative
+      width: 250px
+      margin: 30px auto 0
+      text-align: center

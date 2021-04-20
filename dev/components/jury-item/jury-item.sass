@@ -1,0 +1,145 @@
+.jury-item
+  position: relative
+  width: calc(33.333333% - 40px)
+  height: 530px
+  margin: 0 20px 40px
+  background-color: #17172C
+  cursor: pointer
+  &--big
+    width: calc(66.666666% - 40px)
+    .jury-item__info
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: flex-end
+      width: 100%
+      &-about
+        width: 350px
+  &--become
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-end
+    align-items: center
+    padding-bottom: 45px
+    cursor: default
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 373px
+      height: 288px
+      background:
+        image: url('data:image/svg+xml,%3Csvg%20width%3D%22373%22%20height%3D%22288%22%20viewBox%3D%220%200%20373%20288%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M418.242%20-14.6582C396.433%2054.0917%20330.187%20179.621%20239.677%20131.741C219.263%20119.688%20294.94%20126.964%20289.77%20146.727C284.599%20166.491%20185.975%20237.005%20140.954%20179.992C95.9329%20122.978%20249.983%20150.248%20212.962%20207.649C175.941%20265.049%2064.6751%20274.633%2045.3583%20252.417C26.0414%20230.2%2082.7309%20224.019%2083.6181%20247.604C84.5052%20271.188%2054.7712%20286.477%2011.1665%20286.768C-23.7172%20287%20-42.2935%20260.887%20-47.2212%20247.801%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+        position: center
+        size: contain
+        repeat: no-repeat
+  &__background
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 445px
+    background:
+      position: top center
+      size: contain
+      repeat: no-repeat
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(180deg, rgba(18, 18, 35, 0) 0%, rgba(23, 23, 44, 0) 42.71%, rgba(23, 23, 44, 0.69) 75%, #17172C 100%)
+  &__content
+    z-index: 2
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    height: 100%
+    padding: 35px 30px
+  &__label
+    padding: 5px 10px
+    background: #fff
+  &__info
+    color: #fff
+  &__name
+    pointer-events: none
+    margin-bottom: 10px
+    line-height: 1.5
+    color: #fff
+    text-decoration: none
+    font:
+      size: 25px
+      weight: 700
+  &__desc
+    padding-right: 10px
+    line-height: 1.5
+  &__more
+    opacity: 0.4
+    display: inline-block
+    margin-top: 10px
+    color: #fff
+  &__link
+    display: block
+    text-align: center
+    color: #fff
+    font:
+      size: 25px
+      weight: 700
+
+@media only screen and (max-width: $mobile)
+  .jury-item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: auto
+    margin: 0 0 20px
+    background-color: transparent
+    &--become
+      overflow: hidden
+      height: 190px
+      background-color: #17172C
+      padding: 105px 0 0 95px
+      &:before
+        top: -103px
+        width: 233px
+    &__background
+      position: static
+      flex-shrink: 0
+      width: 80px
+      height: 80px
+      margin-right: 15px
+      border-radius: 50%
+      background-size: cover
+      &:after
+        display: none
+    &__content
+      padding: 0
+    &__label
+      display: none
+    &__info
+      &-about
+        width: auto !important
+    &__name
+      text-decoration: underline
+      font-size: 15px
+    &__desc
+      display: none
+    &__more
+      display: none
+    &__link
+      z-index: 2
+      position: relative
+      width: 145px
+      text-align: left
+      font-size: 15px

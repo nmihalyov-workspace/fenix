@@ -1,0 +1,22 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin enroll
+  section.enroll.container
+    .enroll__wrapper.wrapper
+      +heading('Подайте заявку на участие, пройдите отборочный этап и получите:', 'enroll__heading')
+      .enroll__grid
+        .enroll__item
+          .enroll__item-icon
+          p.enroll__item-heading Именное членство
+          p.enroll__item-desc в I российском профессиональном сообществе учителей частных школ, созданном для обмена уникальным опытом, повышения квалификации и защиты прав педагогов частных школ
+        .enroll__item
+          .enroll__item-icon
+          p.enroll__item-heading Доступ к «живым» мастер-классам
+          p.enroll__item-desc + лекциям и вебинарам для учителей частных школ от членов жюри и приглашённых экспертов
+        .enroll__item
+          .enroll__item-icon
+          p.enroll__item-heading Внимание лучших работодателей
+          p.enroll__item-desc а также родителей <br>и учеников частных школ
+      p.enroll__desc Давайте держаться вместе!
+      +button('popup', 'Подать заявку', 'enroll__btn', {popup: 'application'})

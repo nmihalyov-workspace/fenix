@@ -1,0 +1,27 @@
+.button
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  max-width: 330px
+  width: 100%
+  height: 90px
+  border: none
+  background-color: $golden
+  color: #fff
+  text-decoration: none
+  cursor: pointer
+  outline: 0
+  transition: background-color .3s ease
+  font-size: 20px
+  &:hover
+    background-color: lighten($golden, 7)
+  &:active
+    transition: none
+    background-color: darken($golden, 3)
+
+@media only screen and (max-width: $mobile)
+  .button
+    max-width: 100%
+    height: 70px
+    font-size: 15px

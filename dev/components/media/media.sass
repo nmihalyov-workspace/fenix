@@ -1,0 +1,51 @@
+.media
+  padding: 115px 0 100px
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: 830px
+    margin-right: -20px
+    padding-top: 20px
+  &__item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    width: 375px
+    height: 265px
+    margin: 0 20px 40px
+    background-color: #F6F6F6
+    &:hover
+      .media__item-image
+        filter: grayscale(0)
+    &-image
+      filter: grayscale(1)
+      transition: all .3s ease
+
+@media only screen and (max-width: $mobile)
+  .media
+    padding: 50px 0 15px
+    &__wrapper
+      flex-flow: column nowrap
+      align-items: stretch
+    &__heading
+      margin-bottom: 30px
+      text-align: center
+    &__grid
+      width: calc(100% + 20px)
+      margin: 0 0 0 -20px
+    &__item
+      width: calc(50% - 20px)
+      height: 100px
+      margin: 0 10px 20px
+      padding: 25px
+      &-image
+        width: 100%
+        height: auto

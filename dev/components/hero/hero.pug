@@ -1,0 +1,17 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.container.wrapper
+    .hero__wrapper.wrapper
+      .hero__content
+        h1.hero__heading Вклад учителя 2021
+        p.hero__desc I всероссийский конкурс учителей частных школ
+        img(src="img/hero.png", alt="").hero__img.hero__img--mobile
+        .hero__about
+          .hero__fund
+            p.hero__fund-heading Призовой фонд
+            p.hero__fund-value 1 000 000 <span>&#8381;</span>
+          +button('popup', 'Подать заявку', 'hero__btn', {popup: 'application'})
+        p.hero__disclaimer С 1 января до 15 февраля 2021 года успейте подать заявку на участие в конкурсе.
+        a.hero__link(href="#") Положение о проведении конкурса
+      img(src="img/hero.png", alt="").hero__img

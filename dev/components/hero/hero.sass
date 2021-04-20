@@ -1,0 +1,114 @@
+.hero
+  z-index: 2
+  position: relative
+  padding: 130px 0 30px
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__content
+    width: 630px
+  &__heading
+    margin-bottom: 30px
+    font:
+      family: 'PlayfairDisplay'
+      size: 58px
+      weight: 300
+  &__desc
+    opacity: 0.4
+    margin-bottom: 115px
+    font:
+      size: 40px
+      weight: 100
+  &__about
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 60px
+    &:before
+      z-index: 1
+      content: ''
+      position: absolute
+      top: -25px
+      left: 0
+      display: block
+      width: 132px
+      height: 132px
+      background:
+        image: url('../img/icons/cup.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__fund
+    z-index: 2
+    position: relative
+    margin-right: 35px
+    &-heading
+      opacity: 0.4
+      margin-bottom: 5px
+    &-value
+      color: $golden
+      font:
+        size: 50px
+        weight: 100
+      span
+        font-size: 41px
+  &__btn
+    width: 255px
+  &__disclaimer
+    opacity: 0.4
+    margin-bottom: 5px
+    white-space: nowrap
+  &__link
+    opacity: 0.4
+    color: $black
+  &__img
+    width: 550px
+    height: auto
+    &--mobile
+      display: none
+
+@media only screen and (max-width: $mobile)
+  .hero
+    padding: 86px 0 50px
+    &__wrapper
+      flex-flow: column nowrap
+    &__content
+      text-align: center
+      width: 100%
+    &__heading
+      font-size: 30px
+    &__desc
+      margin-bottom: 0
+      font-size: 15px
+    &__img
+      display: none
+      width: 100%
+      margin-bottom: 15px
+      &--mobile
+        display: block
+    &__about
+      flex-flow: column nowrap
+      margin-bottom: 25px
+      &:before
+        top: -15px
+        left: calc(50% - 45px)
+        width: 90px
+        height: 90px
+    &__fund
+      margin: 0 0 40px 0
+      padding-top: 5px
+      &-heading
+        margin-bottom: 0
+      &-value
+        font-size: 30px
+        span
+          font-size: 24px
+    &__btn
+      width: 100%
+    &__disclaimer
+      white-space: normal
+      text-align: center

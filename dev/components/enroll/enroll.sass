@@ -1,0 +1,85 @@
+.enroll
+  padding: 110px 0 140px
+  background-color: $black
+  &__wrapper
+    z-index: 2
+    position: relative
+  &__heading
+    margin-bottom: 100px
+    color: #fff
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 1065px
+    margin: 0 auto 95px
+    color: #fff
+    text-align: center
+  &__item
+    width: 275px
+    &:first-child
+      .enroll__item-desc
+        width: 365px
+        margin-left: -45px
+    &-icon
+      width: 100px
+      height: 100px
+      margin: 0 auto 45px
+      border-radius: 50%
+      background-color: $sand
+      background:
+        image: url('../img/icons/check.svg')
+        position: center
+        repeat: no-repeat
+    &-heading
+      margin-bottom: 10px
+      font:
+        size: 25px
+        weight: 700
+    &-desc
+      opacity: 0.6
+      line-height: 1.5
+  &__desc
+    opacity: 0.4
+    width: 1020px
+    margin: 0 auto 95px
+    text-align: center
+    color: #fff
+    line-height: 1.5
+    font-size: 25px
+  &__btn
+    margin: 0 auto
+
+@media only screen and (max-width: $mobile)
+  .enroll
+    padding: 45px 0 70px
+    &__heading
+      margin-bottom: 40px
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin-bottom: 45px
+    &__item
+      width: 100%
+      &:first-child
+        .enroll__item-desc
+          width: 100%
+          margin: 0
+      &:not(:last-child)
+        margin-bottom: 40px
+      &-icon
+        width: 50px
+        height: 50px
+        margin: 0 auto 20px
+        background-size: 40%
+      &-content
+        padding-top: 10px
+      &-heading
+        width: 210px
+        margin: 0 auto 10px
+        font-size: 15px
+    &__desc
+      width: 100%
+      margin-bottom: 30px
+      font-size: 15px

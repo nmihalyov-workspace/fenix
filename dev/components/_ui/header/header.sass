@@ -1,0 +1,205 @@
+.header
+  z-index: 3
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 30px 0
+  background-color: #fff
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 245px
+    height: 70px
+    background:
+      image: url('../img/logo.svg')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__burger
+    display: none
+  &__menu
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+  &__nav
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    &-item
+      opacity: 0.4
+      margin-right: 20px
+      color: $black
+      text-decoration: none
+      transition: opacity .3s ease
+      &:hover
+        opacity: 1
+  &__socials
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    &-item
+      position: relative
+      display: block
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background:
+        color: #131315
+        position: center
+        repeat: no-repeat
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        display: block
+      &:after
+        background:
+          size: contain
+          position: center
+          repeat: no-repeat
+      &[data-social="fb"]
+        background-image: url('../img/icons/fb.svg')
+        &:after
+          top: 4px
+          left: -4px
+          width: 40px
+          height: 38px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%2242%22%20height%3D%2240%22%20viewBox%3D%220%200%2042%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.5577%201.04267C26.893%200.720286%2033.6041%202.17912%2037.5842%206.97659C41.5829%2011.7966%2041.6173%2018.4848%2039.9934%2024.4701C38.4437%2030.1814%2034.7998%2035.2739%2029.2506%2037.6914C23.8679%2040.0363%2017.7694%2038.988%2012.4766%2036.4576C7.25047%2033.9591%202.79779%2029.9006%201.44553%2024.3984C0.0781589%2018.8346%201.96625%2013.0808%205.63081%208.60258C9.30392%204.11392%2014.6618%201.34269%2020.5577%201.04267Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-social="vk"]
+        background-image: url('../img/icons/vk.svg')
+        &:after
+          top: 0
+          left: -7px
+          width: 41px
+          height: 39px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%2241%22%20height%3D%2239%22%20viewBox%3D%220%200%2041%2039%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M33.6383%2036.8364C28.5054%2040.1447%2022.081%2038.1572%2016.2911%2036.3356C10.5277%2034.5223%204.0497%2032.5091%201.94798%2026.866C-0.143058%2021.2515%203.22115%2015.3375%206.60847%2010.3376C9.68193%205.80087%2013.9046%202.01588%2019.3235%201.21817C24.7462%200.419914%2030.0132%202.63128%2034.0289%206.30109C38.1198%2010.0396%2040.6748%2015.1095%2040.6037%2020.6655C40.5251%2026.8163%2038.8438%2033.4813%2033.6383%2036.8364Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-social="inst"]
+        background-image: url('../img/icons/inst.svg')
+        &:after
+          top: 2px
+          left: 3px
+          width: 37px
+          height: 39px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%2237%22%20height%3D%2239%22%20viewBox%3D%220%200%2037%2039%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M17.763%201.18705C23.8423%200.914349%2029.5689%204.34477%2033.0289%209.21641C36.233%2013.7276%2035.9642%2019.4837%2034.5237%2024.7853C33.1565%2029.8168%2030.4171%2034.6408%2025.5401%2036.7774C20.7885%2038.859%2015.4127%2037.4955%2010.7709%2035.1911C6.28737%2032.9653%202.53475%2029.4664%201.26621%2024.7267C-0.0501842%2019.8082%201.22273%2014.7103%204.16553%2010.5111C7.45227%205.82122%2011.9355%201.44846%2017.763%201.18705Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-social="ok"]
+        background-image: url('../img/icons/ok.svg')
+        &:after
+          top: 1px
+          left: -6px
+          width: 39px
+          height: 37px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%2239%22%20height%3D%2237%22%20viewBox%3D%220%200%2039%2037%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M37.7705%2022.2264C36.6078%2028.1997%2031.9284%2032.9605%2026.3804%2035.1796C21.2429%2037.2346%2015.7109%2035.6215%2010.8959%2032.9761C6.32624%2030.4656%202.28048%2026.6697%201.34908%2021.4275C0.441613%2016.3198%203.02949%2011.4146%206.35959%207.44383C9.57613%203.60846%2013.8585%200.782537%2018.7636%200.662625C23.8537%200.538189%2028.51%202.97276%2031.9006%206.81944C35.6874%2011.1157%2038.885%2016.5005%2037.7705%2022.2264Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-social="tg"]
+        background-image: url('../img/icons/tg.svg')
+        &:after
+          top: 1px
+          left: -2px
+          width: 38px
+          height: 37px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%2238%22%20height%3D%2237%22%20viewBox%3D%220%200%2038%2037%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M18.4464%200.958512C24.2484%200.663267%2030.3946%201.99929%2034.0395%206.39289C37.7016%2010.8071%2037.7332%2016.9323%2036.2459%2022.4137C34.8267%2027.6443%2031.4896%2032.308%2026.4075%2034.522C21.478%2036.6695%2015.8929%2035.7095%2011.0456%2033.3921C6.25944%2031.1039%202.18161%2027.3871%200.943183%2022.348C-0.309081%2017.2527%201.42006%2011.9832%204.77613%207.882C8.14002%203.77121%2013.0468%201.23328%2018.4464%200.958512Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &:not(:last-child)
+        margin-right: 25px
+
+@media only screen and (max-width: $mobile)
+  .header
+    padding: 25px 0
+    &__logo
+      width: 199px
+      height: 36px
+      background-image: url('../img/logo-mobile.svg')
+    &__burger
+      z-index: 2
+      position: relative
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: center
+      width: 16px
+      height: 16px
+      cursor: pointer
+      &--active
+        div:nth-child(1)
+          top: 0.4167vw
+          width: 0%
+          left: 50%
+        div:nth-child(2)
+          transform: rotate(45deg)
+        div:nth-child(3)
+          transform: rotate(-45deg)
+        div:nth-child(4)
+          top: 0.4167vw
+          width: 0%
+          left: 50%
+      div
+        position: absolute
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $golden
+        transition: all .3s ease
+        &:nth-child(1)
+          top: 3px
+        &:nth-child(2),
+        &:nth-child(3)
+          top: 8px
+        &:nth-child(4)
+          top: 13px
+    &__menu
+      z-index: 1
+      position: fixed
+      overflow: auto
+      top: 0
+      left: 0
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      height: 100%
+      padding: 70px
+      background-color: #fff
+      transform: translateY(-100%) translateZ(0)
+      transition: transform .3s ease
+      &--active
+        transform: translateY(0) translateZ(0)
+        .header__nav-item
+          opacity: 1
+          padding-top: 0
+          transform: none
+    &__nav
+      flex-flow: column
+      margin-bottom: 55px
+      &-item
+        opacity: 0
+        transform: translateY(-200%)
+        color: $golden
+        margin-right: 0
+        font-size: 23px
+        &:not(:last-child)
+          margin-bottom: 25px
+        &:first-child
+          transition: all .5s ease .35s
+        &:nth-child(2)
+          transition: all .5s ease .3s
+        &:nth-child(3)
+          transition: all .5s ease .25s
+        &:nth-child(4)
+          transition: all .5s ease .2s
+        &:nth-child(5)
+          transition: all .5s ease .15s
+        &:last-child
+          transition: all .5s ease .1s
+    &__socials-item:not(:last-child)
+      margin-right: 15px

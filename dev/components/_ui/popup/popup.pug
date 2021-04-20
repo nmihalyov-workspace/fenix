@@ -1,0 +1,78 @@
+include ../input/input
+include ../textarea/textarea
+include ../button/button
+
+mixin popup(type)
+  .popup.js-popup.js-close-popup(data-popup=type)
+    .popup__backdrop
+    .popup__container
+      .popup__wrapper
+        .popup__window
+          if type === 'application-success' || type === 'application-failed'
+            .popup__close.popup__close--info.js-close-popup
+          else
+            .popup__close.js-close-popup
+          if type === 'jury'
+            .popup__jury
+              .popup__jury-about
+                .popup__jury-image(style="background-image: url('img/inhtml/jury-1.jpg');")
+                .popup__jury-info
+                  p.popup__jury-label Председатель
+                  p.popup__jury-name Киселева Наталья Александровна
+              ul.popup__jury-list
+                li.popup__jury-list-item Заместитель руководителя Департамента образования и науки города Москвы.
+                li.popup__jury-list-item Награждена медалью «За вклад в развитие Российского образования» (2008 г.), Почетной грамотой Министерства образования и науки Российской Федерации (2011 г.)
+                li.popup__jury-list-item Является победителем конкурса профессионального мастерства «Учитель года Мурманской области» (2006 г.), победителем конкурсного отбора «Лучший учитель России» в рамках Приоритетного национального проекта «Образование» (2010 г.)
+                li.popup__jury-list-item Лауреат конкурса «Профессиональная команда страны» (2011 г.)
+                li.popup__jury-list-item Включена в ТОП-50 лучших учителей планеты (финалист Global Teacher Prize в 2018 г).
+          if type === 'application'
+            .popup__application
+              .popup__application-inner
+                p.popup__application-heading Заявка на конкурс «Вклад&nbsp;учителя»
+                form.popup__application-form(action="")
+                  .popup__application-col
+                    +textarea('name', 'Фамилия, имя, отчество', '', true)
+                    +input('text', 'dateOfBirth', 'Дата рождения', '', true, false, 'numeric')
+                    +textarea('address', 'Адрес проживания', '', true)
+                    .popup__application-row
+                      +input('tel', 'tel', 'Телефон', '', true, false, 'tel')
+                      +input('email', 'email', 'E-mail', '', true)
+                    +textarea('education', 'Образование', '', true, 'Текст подсказки')
+                    +textarea('training', 'Повышение квалификации', '', false, 'Текст подсказки')
+                    p.popup__application-policy Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих персональных данных</a>
+                  .popup__application-col
+                    +textarea('work', 'Место работы', '', true, 'Текст подсказки')
+                    +textarea('position', 'Должность, функционал', '', true)
+                    +textarea('experience', 'Педагогический стаж', '', true)
+                    +textarea('results', 'Результаты проф. деятельности', '', true, 'Текст подсказки')
+                    +textarea('link', 'Ссылка на резюме или личный сайт', '', false, 'Текст подсказки')
+                    +textarea('other', 'Иная информация')
+                    +button('submit', 'Подать заявку', 'popup__application-btn js-form-submit')
+                    p.popup__application-policy.popup__application-policy--mobile Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих персональных данных</a>
+          if type === 'become'
+            .popup__application
+              .popup__application-inner
+                .popup__application-heading.popup__application-heading--become Стать&nbsp;
+                  span.popup__dropdown
+                    p.popup__dropdown-value членом жюри
+                    .popup__dropdown-menu
+                      p.popup__dropdown-item(data-value="член жюри") членом жюри
+                      p.popup__dropdown-item(data-value="наблюдатель") наблюдателем
+                form.popup__application-form(action="")
+                  +input('hidden', 'type', '', '', true, false, 'text', 'член жюри')
+                  .popup__application-col
+                    +textarea('name', 'Фамилия, имя, отчество', '', true)
+                    +input('tel', 'tel', 'Телефон', '', true, false, 'tel')
+                    p.popup__application-policy.popup__application-policy--become Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих персональных данных</a>
+                  .popup__application-col
+                    +textarea('achievements', 'Достижения в образовании', '', true, 'Документы, награды, премии, звания')
+                    +button('submit', 'Подать заявку', 'popup__application-btn js-form-submit')
+                    p.popup__application-policy.popup__application-policy--mobile Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих персональных данных</a>
+          if type === 'application-success'
+            .popup__info
+              p.popup__info-heading Ваша заявка отправлена успешно!
+              p.popup__info-desc Дальнейшая информация придёт на ваш e-мейл.
+          if type === 'application-failed'
+            .popup__info
+              p.popup__info-heading Возможно, вы заполнили не все поля заявки.
+              p.popup__info-desc Пожалуйста, проверьте введённые данные. Или свяжитесь с организатором: <a href="mailto:info@uchitel.top">info@uchitel.top</a>

@@ -1,0 +1,26 @@
+.jury
+  padding: 110px 0 140px
+  background-color: $black
+  &__wrapper
+    z-index: 2
+    position: relative
+  &__heading
+    margin-bottom: 75px
+    color: #fff
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% + 40px)
+    margin-left: -20px
+
+@media only screen and (max-width: $mobile)
+  .jury
+    padding: 55px 0 60px
+    &__heading
+      margin-bottom: 35px
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin: 0

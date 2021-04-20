@@ -1,0 +1,34 @@
+include ../components/_ui/popup/popup
+include ../components/_ui/header/header
+include ../components/hero/hero
+include ../components/steps/steps
+include ../components/win/win
+include ../components/enroll/enroll
+include ../components/demands/demands
+include ../components/jury/jury
+include ../components/media/media
+include ../components/organizators/organizators
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Феникс
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +hero
+      +steps
+      +win
+      +enroll
+      +demands
+      +jury
+      +media
+      +organizators
+    +popup('jury')
+    +popup('application')
+    +popup('become')
+    +popup('application-success')
+    +popup('application-failed')

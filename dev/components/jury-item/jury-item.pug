@@ -1,0 +1,14 @@
+mixin jury-item(big, image, label, name, desc)
+  .jury-item.js-open-popup(class=`${big ? 'jury-item--big' : ''}`, data-popup="jury")
+    .jury-item__background(style=`background-image: url('img/inhtml/${image}');`)
+    .jury-item__content
+      p.jury-item__label= label
+      .jury-item__info
+        .jury-item__info-about
+          a.jury-item__name.js-open-popup(href="javascript:void(0)", data-popup="jury")= name
+          p.jury-item__desc!= desc
+        a.jury-item__more(href="javascript:void(0)") Узнать больше
+
+mixin jury-item-become
+  .jury-item.jury-item--become
+    a.jury-item__link.js-open-popup(href="javascript:void(0)", data-popup="become") Стать членом жюри

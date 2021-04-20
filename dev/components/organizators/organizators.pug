@@ -1,0 +1,17 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin organizators
+  section.organizators.container
+    .wrapper
+      .organizators__wrapper
+        .organizators__about
+          +heading('Организаторы', 'organizators__heading')
+          .organizators__list
+            img.organizators__logo(src="img/logo-small.svg", alt="")
+            p.organizators__schools НОЧУ «СОШ «Феникс»<br><br>АНОО «Школа имени А. М. Горчакова»
+          p.organizators__developer Создание сайта — <a href="#">студия «Арбуз»</a>
+        .organizators__info
+          p.organizators__desc Вклад учителя 2021 — это I всероссийский конкурс учителей частных школ.<br><br>Чтобы принять участие, нажмите кнопку ниже и заполните форму заявки. Участвовать могут только учителя частных школ с лицензией.
+          +button('popup', 'Подать заявку', '', {popup: 'application'})
+          p.organizators__developer.organizators__developer--mobile Создание сайта — <a href="#">студия «Арбуз»</a>

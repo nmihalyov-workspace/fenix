@@ -1,0 +1,136 @@
+.win
+  z-index: 2
+  position: relative
+  padding: 110px 0 140px
+  &:before
+    z-index: 1
+    content: ''
+    position: absolute
+    bottom: -300px
+    left: 0
+    width: 241px
+    height: 644px
+    display: block
+    background:
+      image: url('data:image/svg+xml,%3Csvg%20width%3D%22241%22%20height%3D%22644%22%20viewBox%3D%220%200%20241%20644%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M-51.1571%202.0834C44.8249%208.37536%20130.337%2060.8707%20186.54%20138.931C239.295%20212.203%20251.312%20304.924%20230.065%20392.675C209.198%20478.854%20154.392%20551.195%2076.4722%20593.513C-6.92752%20638.808%20-107.544%20664.3%20-192.619%20622.236C-276.925%20580.552%20-306.188%20483.095%20-330.565%20392.261C-356.679%20294.953%20-390.091%20186.89%20-331.432%20104.976C-270.471%2019.8464%20-155.639%20-4.76576%20-51.1571%202.0834Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__heading
+    margin-bottom: 175px
+    color: $black
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 915px
+    margin: 0 auto 170px
+  &__item
+    position: relative
+    &:before
+      z-index: 1
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      display: block
+      transform: translate(-50%, -50%)
+      background:
+        position: center
+        size: contain
+        repeat: no-repeat
+    &[data-place="1"]
+      &:before
+        width: 387px
+        height: 407px
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22389%22%20height%3D%22409%22%20viewBox%3D%220%200%20389%20409%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M194.777%201.00331C280.865%201.5269%20347.42%2068.4844%20374.32%20150.031C401.57%20232.636%20390.451%20328.816%20319.675%20379.621C249.669%20429.873%20155.88%20407.91%2086.7661%20356.444C20.7893%20307.315%20-15.5149%20226.386%208.36417%20147.805C33.7497%2064.2667%20107.241%200.470905%20194.777%201.00331Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      .win__item-icon
+        background-image: url('../img/icons/place1.svg')
+      .win__item-value
+        color: #DBCC48
+    &[data-place="2"]
+      &:before
+        width: 409px
+        height: 398px
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22409%22%20height%3D%22398%22%20viewBox%3D%220%200%20409%20398%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M207.22%201.00489C291.506%201.54036%20368.902%2050.1804%20396.153%20129.996C424.705%20213.622%20401.27%20308.351%20329.948%20360.464C258.136%20412.935%20160.582%20407.043%2088.7372%20354.617C17.2921%20302.483%20-17.3524%20211.442%2010.7575%20127.548C38.1298%2045.8554%20121.119%200.457884%20207.22%201.00489Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      .win__item-icon
+        background-image: url('../img/icons/place2.svg')
+      .win__item-value
+        color: #CDCDCD
+    &[data-place="3"]
+      &:before
+        width: 384px
+        height: 408px
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22384%22%20height%3D%22408%22%20viewBox%3D%220%200%20384%20408%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M197.299%201.01006C275.966%201.78979%20345.698%2053.424%20371.146%20132.327C397.877%20215.211%20379.671%20309.262%20313.757%20362.097C243.961%20418.045%20146.983%20423.404%2076.3799%20368.605C6.52682%20314.388%20-15.3549%20215.431%2013.149%20128.779C39.8526%2047.5996%20116.192%200.206156%20197.299%201.01006Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      .win__item-icon
+        background-image: url('../img/icons/place3.svg')
+      .win__item-value
+        color: #7B5900
+    &-icon
+      z-index: 2
+      position: relative
+      width: 158px
+      height: 158px
+      margin-bottom: 35px
+      background:
+        position: center
+        repeat: no-repeat
+    &-value
+      z-index: 2
+      position: relative
+      text-align: center
+      font:
+        size: 25px
+        weight: 700
+  &__desc
+    opacity: 0.4
+    width: 705px
+    margin: 0 auto 75px
+    line-height: 1.5
+    text-align: center
+    font-size: 25px
+  &__btn
+    margin: 0 auto
+
+@media only screen and (max-width: $mobile)
+  .win
+    padding: 50px 0 70px
+    &:before
+      bottom: -1110px
+      left: -210px
+    &__heading
+      margin-bottom: 60px
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin-bottom: 30px
+    &__item
+      width: 100%
+      margin-bottom: 50px
+      &[data-place="1"]
+        &:before
+          width: 247px
+          height: 239px
+          background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22247%22%20height%3D%22239%22%20viewBox%3D%220%200%20247%20239%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M221.96%20144.251C211.26%20185.889%20170.75%20210.003%20127.985%20213.138C84.6646%20216.314%2039.4246%20199.258%2023.403%20158.809C7.55569%20118.8%2029.5753%2076.0348%2062.8916%2048.801C94.6955%2022.8034%20138.303%2015.038%20173.469%2036.1402C210.855%2058.5736%20232.84%20101.914%20221.96%20144.251Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-place="2"]
+        &:before
+          width: 193px
+          height: 188px
+          background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22193%22%20height%3D%22188%22%20viewBox%3D%220%200%20193%20188%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M97.7766%201.0023C137.331%201.2538%20173.652%2024.0999%20186.44%2061.5892C199.839%20100.868%20188.842%20145.362%20155.371%20169.839C121.671%20194.485%2075.8901%20191.717%2042.1739%20167.093C8.64566%20142.606%20-7.61254%2099.8438%205.57906%2060.4391C18.4245%2022.0684%2057.3704%200.74537%2097.7766%201.0023Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &[data-place="3"]
+        &:before
+          width: 214px
+          height: 202px
+          background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22214%22%20height%3D%22202%22%20viewBox%3D%220%200%20214%20202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M208.077%2098.239C209.77%20137.237%20185.938%20173.156%20147.376%20187.858C106.869%20203.302%2059.6199%20196.777%2031.605%20165.521C1.93943%20132.424%20-3.28931%2084.5179%2022.0929%2048.0824C47.2055%2012.0342%2095.8336%20-1.43325%20139.675%2010.39C180.748%2021.4665%20206.333%2058.0322%20208.077%2098.239Z%22%20stroke%3D%22%23E9C188%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &-icon
+        width: 90px
+        height: 90px
+        margin: 0 auto 10px
+        background-size: auto 100%
+      &-value
+        font-size: 15px
+    &__desc
+      width: 100%
+      margin-bottom: 40px
+      font-size: 15px

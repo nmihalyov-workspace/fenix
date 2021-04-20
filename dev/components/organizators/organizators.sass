@@ -1,0 +1,119 @@
+.organizators
+  overflow: hidden
+  position: relative
+  &:after
+    z-index: 1
+    position: absolute
+    content: ''
+    bottom: -715px
+    left: calc(50% - 1300px)
+    display: block
+    width: 2802px
+    height: 1931px
+    background:
+      image: url('data:image/svg+xml,%3Csvg%20width%3D%222802%22%20height%3D%221931%22%20viewBox%3D%220%200%202802%201931%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M155.275%20346.239C185.073%20813.685%20363.275%201078.79%20861.275%201098.24C1754.54%201133.13%20954.716%201530.99%20797.275%201678.24C639.835%201825.49%201117.55%201341.57%201504.45%201196.79C1891.36%201052%201823.97%201643.55%201420.84%201594.44C1017.7%201545.32%202665.44%20403.653%202801.27%20318.243%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__wrapper
+    z-index: 2
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    padding: 110px 0 190px
+    border-top: 1px solid #E5E5E5
+  &__about
+    width: 430px
+  &__heading
+    margin-bottom: 55px
+    text-align: left
+  &__list
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+    margin-bottom: 160px
+  &__logo
+    margin-right: 45px
+  &__schools
+    opacity: 0.4
+    line-height: 1.5
+    font-size: 25px
+  &__developer
+    opacity: 0.4
+    padding-right: 35px
+    color: #131315
+    text-align: right
+    &--mobile
+      display: none
+    a
+      color: #131315
+  &__info
+    width: 600px
+    padding-top: 20px
+  &__desc
+    margin-bottom: 120px
+    line-height: 1.5
+    font-size: 25px
+
+@media only screen and (max-width: $mobile)
+  .organizators
+    &:after
+      bottom: -840px
+      left: calc(50% - 500px)
+      width: 1000px
+    &__wrapper
+      flex-flow: column nowrap
+      align-items: stretch
+      padding-top: 0
+      padding-bottom: 145px
+      border-top: none
+    &__about
+      width: 100%
+    &__heading
+      margin-bottom: 85px
+      text-align: center
+    &__list
+      position: relative
+      flex-flow: column nowrap
+      align-items: center
+      margin-bottom: 70px
+      &:before
+        content: ''
+        position: absolute
+        display: block
+        top: 50%
+        left: 50%
+        width: 320px
+        height: 372px
+        transform: translate(-50%, -50%)
+        background:
+          image: url('data:image/svg+xml,%3Csvg%20width%3D%22320%22%20height%3D%22372%22%20viewBox%3D%220%200%20320%20372%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M296.188%20127.987C313.348%20169.791%20312.818%20217.749%20289.844%20256.736C267.248%20295.083%20225.388%20315.961%20181.378%20322.824C137.511%20329.665%2091.5309%20322.341%2058.4706%20292.818C24.9829%20262.914%208.64605%20217.611%2013.5845%20172.985C18.2926%20130.439%2047.6525%2096.7977%2082.8687%2072.3422C118.205%2047.8036%20160.208%2031.4244%20201.807%2042.2757C245.115%2053.5724%20279.216%2086.6427%20296.188%20127.987Z%22%20stroke%3D%22%23E9C188%22%20stroke-width%3D%220.7%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+          position: center
+          size: contain
+          repeat: no-repeat
+    &__logo
+      width: 45px
+      height: 81px
+      margin: 0 0 25px
+    &__schools
+      width: 180px
+      margin: 0 auto
+      text-align: center
+      font-size: 15px
+    &__developer
+      display: none
+      margin-top: 30px
+      padding: 0
+      text-align: center
+      &--mobile
+        display: block
+    &__info
+      width: 100%
+    &__desc
+      margin-bottom: 45px
+      padding-top: 0
+      text-align: center
+      font-size: 15px
